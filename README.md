@@ -26,14 +26,14 @@ The chart updates in realtime as the votes are cast.
 
 ## Anatomy
 
-* `PollResource`: handles several REST endpoints to manage the poll.
+* [`PollResource`](src/main/java/foo/bar/poller/PollResource.java): handles several REST endpoints to manage the poll.
     - GET `/`: serves the `index.qute.html` template
     - POST `/vote`: pushes an item to the `votes` Kafka topic
     - GET `/votes`: retrieves the votes from the database and returns them as JSON
     - GET `/vote-results`: streams the `poll-results` channel to the clients as Server-Sent Events\
-* `VoteConverter` - receives the vote from the `votes` Kafka topic, and updates the tally into the database using Hibernate with Panache, then pushes it the `poll-results` in-memory channel.
-* `index.qute.html`: a Qute HTML template, where users can cast their votes for their favorite spreads, and see the results updated in real-time in a chart.
-* `app.js`: contains the logic on the client side, to cast votes and update the chart as results come in. *The author being javascript handicapped, don't pay attention to quality the code.*
+* [`VoteConverter`](src/main/java/foo/bar/poller/VoteConverter.java): receives the vote from the `votes` Kafka topic, and updates the tally into the database using Hibernate with Panache, then pushes it the `poll-results` in-memory channel.
+* [`index.qute.html`](src/main/resources/templates/index.qute.html): a Qute HTML template, where users can cast their votes for their favorite spreads, and see the results updated in real-time in a chart.
+* [`app.js`](src/main/resources/META-INF/resources/app.js): contains the logic on the client side, to cast votes and update the chart as results come in. *The author being javascript handicapped, don't pay attention to quality the code.*
 
 ## Running in native
 
