@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>{appName}</title>
+  <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.css">
+  <style>
+    img {
+      width: 200px
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="container">
+      <h1>Pick your favorite spread</h1>
+      <div class="col-md-12 col-md-offset-2">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="poll-logo nutella">
+              <img src="images/nutella.jpg" alt="nutella">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="poll-logo peanut-butter">
+              <img src="images/peanut-butter.jpg" alt="peanut-butter">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="poll-logo marmite">
+              <img src="images/marmite.jpg" alt="marmite">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="poll-logo jam">
+              <img src="images/jam.png" alt="jam">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Results</h1>
+      <div id="chartContainer" style="height: 300px;"></div>
+    </div>
+  </div>
+  <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.js"></script>
+  <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
